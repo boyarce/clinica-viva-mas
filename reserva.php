@@ -1,5 +1,7 @@
 <?php include_once 'session.php' ?>
 <script src="js/reservar.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.rut.min.js"></script>
 <script>
     
  function limpiarValores(){
@@ -55,7 +57,9 @@
 
     <div class="areaBotones">
         <input id="cancelar" type="button" value="Cancelar" name="cancelar" />
-        <input id="reservar" type="button" value="Reservar" name="reservar" onclick="limpiarValores()" />
+        <input id="reservar" type="button" value="Reservar" name="reservar" />
+        
+        <input id="limpiar" type="button" value="Clear" name="limpiar" onclick="limpiarValores()"/>
     </div>
 
 </section>
