@@ -6,9 +6,9 @@ if(isset($_POST['idPaciente']) && isset($_POST['idProfesional']) && isset($_POST
 
 function ingresarReserva($idPaciente, $idProfesional, $fecha, $hora) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
     $port = 3306;           
 
     $query = "INSERT INTO reserva (id_paciente, id_profesional, fecha, hora) VALUES(?, ?, ?, ?)";

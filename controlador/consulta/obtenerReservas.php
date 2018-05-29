@@ -6,9 +6,9 @@ if(isset($_GET['idPaciente'])) {
 
 function getReservas($idPaciente) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
     $port = 3306;           
 
     $query = "SELECT r.id_paciente, 

@@ -4,12 +4,11 @@ echo json_encode(getEspecialidades());
 
 
 function getEspecialidades() {
-    $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
-    $port = 3306;           
-
+   $host = "localhost";
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
+    $port = 3306; 
     $query = "SELECT e.id, e.nombre 
               FROM especialidad e";
     

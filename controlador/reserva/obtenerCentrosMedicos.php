@@ -6,10 +6,10 @@ if(isset($_GET['codigoEspecialidad'])) {
 
 function getCentrosMedicos($codigoEspecialidad) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
-    $port = 3306;           
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
+    $port = 3306;          
 
     $query = "SELECT c.id, c.nombre 
               FROM centromedico c, especialidad_centromedico ec 

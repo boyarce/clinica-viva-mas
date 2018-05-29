@@ -6,9 +6,9 @@ if(isset($_POST['idPaciente']) && isset($_POST['idProfesional']) && isset($_POST
 
 function anularReserva($idPaciente, $idProfesional, $fecha) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
     $port = 3306;           
 
     $query = "DELETE FROM reserva WHERE id_profesional = ? AND id_paciente = ? and fecha = ?";
