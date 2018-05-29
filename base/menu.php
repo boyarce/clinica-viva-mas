@@ -6,7 +6,7 @@
  */
 
     $pagina = htmlentities($_SERVER['PHP_SELF']);
-    $paginas = array("inicio","reserva","consulta");
+    $paginas = array("inicio","reserva","consulta","usuario");
 
     $menuActual = "inicio";
 
@@ -21,6 +21,17 @@
             echo '<li class="actual">'.ucfirst($item).'</li>';
         } else {
             echo '<li><a href="'.$pagina.'?menu='.$item.'">'.ucfirst($item).'</a></li>';
+        
+               
+          /*if($_SESSION['perfil'] == 2 && $item == "reserva"){
+            echo '<li><a href="'.$pagina.'?menu='.$item.'">'.ucfirst($item).'</a></li>';
+          }else if($_SESSION['perfil'] == 3 && $item == "consulta"){
+              echo '<li><a href="'.$pagina.'?menu='.$item.'">'.ucfirst($item).'</a></li>';
+          }
+           * 
+           * */
+           
+            
         }
     }
 

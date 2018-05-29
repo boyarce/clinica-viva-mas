@@ -10,6 +10,7 @@
         if($usuario!=NULL) {
             //session_register($usuario);
             $_SESSION['loginUser'] = $usuario->getNombre();
+            // $_SESSION['perfil'] = $user->getId_perfil();
             header("location: index.php?menu=inicio");
         }else {
             $loginError = "El email o clave no es v&aacute;lido";

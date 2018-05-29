@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Osvaldo
 */
 
-.reserva, .consulta {
+.reserva, .consulta, .usuario{
     width: 600px;
     text-align: justify;
 }
@@ -20,21 +20,21 @@ and open the template in the editor.
     top:50px;
 }
 
-.areaPaciente {
+.areaPaciente, .areaEmailUsuario label ,.areaClaveUsuario label , .areaNombreUsuario label {
     height: 50px;
 }
 
-.areaSelectores {
+.areaSelectores, .areaSelectoresPerfil {
     width: 100%;
 }
 
-.areaSelectores label {
+.areaSelectores label, .areaSelectoresPerfil label, .areaSelectoresPerfil select {
     position: relative;
     left: 50px;
     top: 25px;
 }
 
-.areaBotones {
+.areaBotones, .areaBotonesUsuario {
     text-align:right;
     height: 50px;
     margin-top: 20px;
