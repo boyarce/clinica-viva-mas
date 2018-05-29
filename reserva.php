@@ -1,6 +1,17 @@
 <?php include_once 'session.php' ?>
 <script src="js/reservar.js"></script>
-
+<script>
+    
+ function limpiarValores(){
+ 
+     document.getElementById('idPaciente').value="";
+     document.getElementById('especialidad').value ="-- Seleccionar Especialidad --";
+     document.getElementById('centroMedico').value ="-- Seleccionar Centro M&eacute;dico --";
+     document.getElementById('profesional').value ="-- Seleccionar Profesional --";     
+     document.getElementById('fecha').value="dd-mm-aaaa";
+      document.getElementById('horario').value ="-- Seleccionar Hora --"; 
+ }
+ </script>
 <section class="reserva">
     <b>Reserva de Horas</b>
     <p>
@@ -44,7 +55,7 @@
 
     <div class="areaBotones">
         <input id="cancelar" type="button" value="Cancelar" name="cancelar" />
-        <input id="reservar" type="button" value="Reservar" name="reservar" />
+        <input id="reservar" type="button" value="Reservar" name="reservar" onclick="limpiarValores()" />
     </div>
 
 </section>
