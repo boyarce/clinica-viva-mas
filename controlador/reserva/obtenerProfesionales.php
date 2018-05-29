@@ -6,9 +6,9 @@ if(isset($_GET['codigoEspecialidad']) && isset($_GET['codigoCentroMedico'])) {
 
 function getProfesionales($codigoEspecialidad, $codigoCentroMedico) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
-    $database = "clinicavivamas";
+    $user = "user";
+    $password = "123";
+    $database = "clinica";
     $port = 3306;           
 
     $query = "SELECT p.id, p.nombres, p.apellidos
