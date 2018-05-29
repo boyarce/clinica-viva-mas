@@ -12,11 +12,45 @@ class UsuarioDao implements AbstractDao  {
     
     public function getAll(){
         
+        $query = "SELECT u.email, u.clave, u.nombre, p.descripcion
+                  FROM usuario u, perfil p
+                  WHERE u.id_perfil =  p.id_perfil";
         
+         
+        $listado = array();
+        $statement = $this->conexion->prepare($query);
+        $statement->execute();
+        
+        while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+            $usr = new Usuario($row["email"], $row["clave"]);
+            $perfil = new Perfil($row["id_perfil"]);
+            $perfil->setDescripcion($row["descripcion"]);
+            $usr->setNombre($row["nombre"]);
+            $usr->setEmail($row["email"]);
+            $usr->setPerfil($perfil);
+            array_push($listado, $usr);
+        }
+        
+        return $listado;
     }
     
     public function getById($idUsuario) {
+        $query = "SELECT email, clave, nombre"
+                    ."FROM usuario "
+                    ."WHERE email = ?";
+        $usuario = null;
+        $statement = $this->conexion->prepare($query);
+        $statement->bindParam(1, $idUsuario);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
         
+        if($result != null) {
+            $usuario = new Usuario($result["id_perfil"]);
+            $usuario->setEmail($result["email"]);
+            $usuario->setNombre($result["nombre"]);
+        }
+        
+        return $usuario;
     }
     
     public function insert($usuario) {
@@ -32,7 +66,7 @@ class UsuarioDao implements AbstractDao  {
     }
     
     public function autenticate($email, $clave) {
-        $preparedStmt = $this->conexion->prepare("SELECT email, clave, nombre FROM usuario WHERE email = ? AND clave = PASSWORD(?)");
+       $preparedStmt = $this->conexion->prepare("SELECT email, clave, nombre FROM usuario WHERE email = ? AND clave = PASSWORD(?)");
         
         if($preparedStmt != false) {
             $preparedStmt->bindParam(1,$email);
