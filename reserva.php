@@ -1,7 +1,6 @@
 <?php include_once 'session.php' ?>
 <script src="js/reservar.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/jquery.rut.min.js"></script>
 <script src="jquery.rut.js"></script>
 
 <script>
