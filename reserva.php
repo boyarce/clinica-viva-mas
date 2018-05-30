@@ -2,6 +2,8 @@
 <script src="js/reservar.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.rut.min.js"></script>
+<script src="jquery.rut.js"></script>
+
 <script>
     
  function limpiarValores(){
@@ -14,6 +16,13 @@
       document.getElementById('horario').value ="-- Seleccionar Hora --"; 
  }
  </script>
+<script>
+$(function() {
+    $("#rut").rut().on('rutValido', function(e, rut, dv) {
+        alert("El rut " + rut + "-" + dv + " es correcto");
+    }, { minimumLength: 7} );
+})
+</script>
 <section class="reserva">
     <b>Reserva de Horas</b>
     <p>
@@ -27,7 +36,7 @@
     
     <div class="areaPaciente">
         <label>RUT del Paciente: </label>
-        <input id="idPaciente" type="text" name="rut" value="" />
+    <input type="test" id="rut" name="rut" />
     </div>
 
     <div class="areaSelectores">
