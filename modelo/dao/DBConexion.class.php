@@ -1,8 +1,8 @@
 <?php
 
 class DBConexion extends PDO {
-    private static $USER = "dbavivamas";
-    private static $PASSWORD = "a1s2d3";   
+    private static $USER = "user";
+    private static $PASSWORD = "123";   
     private static $DSN='mysql:host=localhost;dbname=clinicavivamas;charset=utf8';    
     
     public function __construct() {
