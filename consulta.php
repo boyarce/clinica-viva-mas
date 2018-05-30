@@ -1,6 +1,6 @@
 <?php include_once 'session.php' ?>
 <script src="js/consultar.js"></script>
-<script src="jquery.rut.js"></script>
+<script src="js/jquery.rut.js"></script>
 <script>
 $(function() {
     $("#rut").rut().on('rutValido', function(e, rut, dv) {
