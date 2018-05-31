@@ -55,7 +55,7 @@ $(function() {
         </select>
 
         <label>Fecha: </label>
-        <input type="date" id="fecha" name="fecha" value="" placeholder="seleccione una fecha" />
+        <input type="date" id="fecha" name="fecha" value="" placeholder="seleccione una fecha" min=<?php echo date('Y-m-d',strtotime("-1 days"));?> >
 
         <label>Horario: </label>
         <select id="horario" name="horario">
