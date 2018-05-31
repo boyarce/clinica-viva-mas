@@ -17,8 +17,8 @@
  </script>
 <script>
 $(function() {
-    $("#rut").rut().on('rutValido', function(e, rut, dv) {
-        alert("El rut " + rut + "-" + dv + " es correcto");
+    $("#idPaciente").rut().on('rutValido', function(e, idPaciente, dv) {
+        alert("El rut " + idPaciente + "-" + dv + " es correcto");
     }, { minimumLength: 7} );
 })
 </script>
@@ -35,7 +35,7 @@ $(function() {
     
     <div class="areaPaciente">
         <label>RUT del Paciente: </label>
-    <input type="test" id="rut" name="rut" />
+    <input type="test" id="idPaciente" name="rut" />
     </div>
 
     <div class="areaSelectores">
@@ -55,7 +55,7 @@ $(function() {
         </select>
 
         <label>Fecha: </label>
-        <input type="date" id="fecha" name="fecha" value="" placeholder="seleccione una fecha" />
+        <input type="date" id="fecha" name="fecha" value="" placeholder="seleccione una fecha" min=<?php echo date('Y-m-d',strtotime("-1 days"));?> >
 
         <label>Horario: </label>
         <select id="horario" name="horario">

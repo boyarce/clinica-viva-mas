@@ -3,8 +3,8 @@
 <script src="js/jquery.rut.js"></script>
 <script>
 $(function() {
-    $("#rut").rut().on('rutValido', function(e, rut, dv) {
-        alert("El rut " + rut + "-" + dv + " es correcto");
+    $("#idPaciente").rut().on('rutValido', function(e, idPaciente, dv) {
+        alert("El rut " + idPaciente + "-" + dv + " es correcto");
     }, { minimumLength: 7} );
 })
 </script>
