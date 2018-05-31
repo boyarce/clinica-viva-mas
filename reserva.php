@@ -35,7 +35,7 @@ $(function() {
     
     <div class="areaPaciente">
         <label>RUT del Paciente: </label>
-    <input type="test" id="rut" name="rut" />
+    <input type="text" id="rut" name="rut" />
     </div>
 
     <div class="areaSelectores">
